@@ -1,0 +1,693 @@
+CHANGES
+=======
+
+4.2.0
+-----
+
+* modify the home-page info with the developer documentation
+* Tempest: add auto-discovery test
+* Updated from global requirements
+* Add translation marker to deprecated_reason of config opts
+* Add translation marker to help of config opts
+* Updated from global requirements
+* Disable neutron tests in our grenade
+* Log hook names as we run them
+* Set node to the error if reapply fails
+* TrivialFix: Remove cfg import unused
+* Replace assertRaisesRegexp with assertRaisesRegex
+* Inherit from oslotest base
+* Add PCI devices plugin to inspector
+* Change asserts with more specific assert methods
+* Python 3.x compatibility ConfigParser
+* Changed an assert to more specific assert method
+* Fix formatting strings in LOG.error
+* Fix tempest.conf generation
+* Use upper constraints for all jobs in tox.ini
+* functional: allow passing kwargs to all calls
+* Increase verbosity for functional tests
+* Fix order of arguments in assertEqual
+* Modify the SQL's string from double quote to single quote
+* Updated from global requirements
+* Tempest: increase ironic sync timeout
+
+4.1.0
+-----
+
+* Fix release notes formatting
+* Add callback function to manage missing hooks
+* Updated from global requirements
+* Check whether action value is string before calling format()
+* Updated from global requirements
+* Use OSC in exercise.sh
+* Provide meaningful error messages in functional tests
+* Add GenericLocalLinkConnectionHook processing hook
+* Combine multiple warning logs into one in create_ports
+* Add a simple smoke test to be run in the grenade gate
+* Remove redundant white space
+* Tempest: wrap instance actions into inspector methods
+* Fix improperly placed firewall.update_filters when aborting
+* Add config to skip power off after introspection
+* Update example.conf
+* [doc]Add 'ipa-debug=1' to installation document
+* Updated from global requirements
+* [devstack]Remove unneeded enable_service in example.local.conf
+* [devstack]Switch to pip_install_gr for inspector client
+* Updated from global requirements
+* [devstack]Only cleanup tftp directory if ipxe disabled
+
+4.0.0
+-----
+
+* remove unused LOG
+* Updated from global requirements
+* Skip test_init_failed_processing_hook test
+* Make Ironic variables visible inside exercise.sh
+* [devstack] Do not hardcode coreos ramdisk when building from source
+* Allow customizing ramdisk logs file names and simplify the default
+* Introduce upgrade testing with Grenade
+* Updated from global requirements
+* Use run_process in the devstack plugin
+* Create devstack/example.local.conf and include it in the docs
+* Updated from global requirements
+* Updated from global requirements
+* devstack/plugin.sh: use screen_stop
+* Updated from global requirements
+* Fix tempest tests
+* Fix response code for rule creating API
+* Tempest: don't rely on tempest ironic client
+* Update terribly outdated installation instructions
+* Add config fixture to functional tests
+* Return HTTP 500 from /v1/continue on unexpected exceptions
+* Remove deprecated alias "root_device_hint" for "raid_device" hook
+* Add a plugin for capabilities detection
+* Remove support for the old bash ramdisk
+* Updated from global requirements
+* Remove iterated form of side effects to simplify code
+* Updated from global requirements
+* Updated from global requirements
+* Tempest: add basic test
+* Updated from global requirements
+* Updated from global requirements
+* Fix py3 issue in functional tests
+* Updated from global requirements
+* Always convert the size root device hints to an integer
+* Update Introspection API Docs from UUID to Node ID
+* Updated from global requirements
+
+3.3.0
+-----
+
+* Ensure rules documentation examples are valid JSON
+* Updated from global requirements
+* Support Ironic node names in our API
+* Updated from global requirements
+* is-empty conditions should accept missing values
+* Store ramdisk logs on all processing failures, not only reported by the ramdisk
+* Use PortOpt type for port options
+* Refactor test_process
+* use openstack cli instead of keystone cli
+* Updated from global requirements
+* Make sure to clean the blacklist cache when disabling the firewall
+* Updated from global requirements
+* Tempest plugin initial commit
+* Make tox respect upper-constraints.txt
+* Updated from global requirements
+* Allow rerunning introspection on stored data
+* Updated from global requirements
+* Move unit tests to "unit" directory
+* Drop the TestInit node_cache unit test
+* Updated from global requirements
+* Update versions on the release notes page
+* Remove downgrades from migrations
+* Set config options for keystoneauth
+* Use keystoneauth for Ironic and Swift clients
+* Better error handling when converting eDeploy data
+* Update reno for stable/mitaka
+* Use all valid MAC's for lookup
+
+3.2.0
+-----
+
+* Update links to existing documentation
+* Disable DHCP completely when no nodes are on introspection
+* Added CORS support to Ironic Inspector
+* Add discover nodes exercise
+* Don't fail on power off if in enroll state
+* [devstack] add support for using iPXE instead of plain PXE
+
+3.1.0
+-----
+
+* Allow specify log level for Error exception
+* Fix arg for "Port already exists" error
+* Updated from global requirements
+* Deprecate root_device_hint name for raid_device plugin
+* Remove redundant data copying in tests
+* Update the troubleshooting guide
+* Officially deprecate rollback for introspection rules
+* Generate API documentation from Python modules
+* Fixed warnings during the docs build
+* Refactor service init, shutdown and run into a separate class
+* Fix incorrect string formatting in the SSL code
+* Refactor base test classes
+* Move ironic options to common/ironic
+* Use dedicated config file for config generator
+* Recommend using dhcp-sequential-ip in the dnsmasq configuration
+* Correct method call to to_dict
+* Use futurist library for asynchronous tasks
+* [devstack] Improve virtual machines logs
+* Split ironic-related functions from utils to separate common.ironic module
+* Add db migrations tests
+* Clarify that we don't maintain compatibility for stored data
+* Add enroll_node_not_found hook
+* Logging configuration options at startup
+* Add invert option to rule conditions
+* Updated from global requirements
+* Updated from global requirements
+* Fix gate broken by sudden remove of SERVICE_TENANT_NAME variable
+* Add new condition: is-empty
+* Updated from global requirements
+* Extend conditions and actions
+* Small ValidateInterfacesHook cleanup
+* Drop rollback actions for set-XX and extend-XX rules actions
+* Do not set Swift parameters defaults in keyword arguments
+* Stop storing ramdisk logs with the introspection data
+* Expand instructions for DNS on Ubuntu
+* Always generate fresh uuid in test cases
+* Updated from global requirements
+* Add forward slash for node path patch
+* Remove "ramdisk" mentioning in func test contrib
+* Introduce API for aborting introspection
+* Do not update firewall rules if list of MAC's did not change
+* Update example.conf
+* Remove deprecated support for passing patches lists into hooks
+* [devstack] Use the coreos builder for the source build of the ramdisk
+* Enable Keystone v3 endpoints for Inspector
+* Register the keystone service and endpoint in the devstack plugin
+* Clean up documentation on introspection rules conditions
+* Updated from global requirements
+* Update translation setup
+* Use new introspection data save command in exercise.sh
+* Set timeout in gate to 10 minutes
+* Updated from global requirements
+* Add new conditions: matches and contains
+* Updated from global requirements
+
+3.0.0
+-----
+
+* Updated from global requirements
+* Stringify node_info.uuid as a precaution
+* Check whether agent tarball exists
+* Updated from global requirements
+* Revert "Block broken diskimage-builder versions to unblock the gate"
+* Block broken diskimage-builder versions to unblock the gate
+* Switch to IPA as a primary ramdisk
+* Track node identification during the whole processing
+* Updated from global requirements
+* Use assertTrue/False instead of assertEqual(T/F)
+* Updated from global requirements
+* Update ramdisk callback documentation
+* Put py34 first in the env order of tox
+* Updated from global requirements
+* Drop support for introspecting nodes in maintenance mode
+* Enable ramdisk log collection in devstack plugin and improve logging
+* Validate that data received from the ramdisk is a JSON object
+* Improve debug logging
+* Adjust releasenotes structure
+* Updated from global requirements
+* Properly report preprocessing errors to a user
+* Updated from global requirements
+* Mention docs in the README now that they're published
+* Auto-fill keystone_authtoken config section
+
+2.3.0
+-----
+
+* Numerous improvements in the documentation
+* Increase cleaning timeout for gate to 10 minutes
+* Add missing release notes
+* Lock nodes to avoid simultaneous introspection requests
+* Generate Sphinx docs
+* Use Reno for release notes management
+* Update IPA section of CONTRIBUTING.rst to match gate
+* Updated from global requirements
+* Updated from global requirements
+* Issue a warning when add_ports=pxe and not PXE NIC address is provided
+* Do not explicitly mention requirements.txt in tox.ini
+* Make it explicit that finished is set to true on failures too
+* Updated from global requirements
+* Properly order node deletion from cache
+* Support IPA for devstack-plugin
+* Enable migration autogenerate
+* Updated from global requirements
+* Replace deprecated LOG.warn with LOG.warning
+* Fix random gate breakages due to cleaning
+* Updated from global requirements
+* Always default to InnoDB for MySQL
+* Updated from global requirements
+* Never run Flask application with debug mode
+* Fix gate broken by the devstack trueorfalse change
+* Add coverage target to tox.ini
+* Use auth_strategy=noauth in functional tests
+* Fix database schema for mysql and switch the gate to testing it
+* Updated from global requirements
+* Add .eggs/ to gitignore
+
+2.2.0
+-----
+
+* Add troubleshooting section for Ubuntu DNS issues
+* Add a warning about sudoers file
+* Add explicit dependencies on Alembic and SA
+* Update README with extra_hardware plugin changes
+* Don't rely on dict ordering in test_plugins_standard
+* Fix rootwrap configuration documentation
+* devstack: allow nodes to be already MANAGEABLE in exercise
+* Updated from global requirements
+* Add alembic migrations for the inspector database
+* Use rootwrap to execute iptables instead of requiring root
+* Support IPA in raid_device plugin
+* Convert eDeploy data so that rules can process it
+* Stop recommending using DIB from source
+* Allow empty lookup attributes if node_not_found_hook is provided
+* Switch to using CLI for introspection rules
+* Add missing plugins for introspection rules
+* Ignore IPMI Address for IPMI Bridged nodes
+* Updated from global requirements
+* Replace glance and keystone commands with OSC equivalents
+* Smart root disk selection including support for root device hints
+* Add API Discovery to Ironic Inspector
+* Add mock for check_call to all firewall tests
+* Updated from global requirements
+* Deprecate returning patches from plugins
+* Add introspection rules support
+* Add instructions how to try IPA as a ramdisk
+* Stop using configuration options in top level code
+* Split standard plugin tests from other processing tests
+* Move update functions to NodeInfo object
+* Enable colorized logging in devstack plugin
+* Revisit required provision states
+* Updated from global requirements
+* Add logging to introspection data storage
+* Make list of ipmi_address-alike driver fields configurable
+* Fix logic for internal server error
+* Pass -w flag to iptables to make it wait for xtables lock
+* Store and expose introspection data
+* Updated from global requirements
+* Rename plugin root_device_hint -> raid_device
+* Clean up README
+* Fail introspection early if no lookup attributes can be detected
+* Updated from global requirements
+* Mock socket in test_bad_hostname_errors
+* Copy gitignore from ironic
+* Updated from global requirements
+* Add func3 tox environment for functional testing with Python 3
+
+2.1.0
+-----
+
+* Updated from global requirements
+* Document error response format in HTTP-API.rst
+* Make Swift endpoint type configurable
+* Migrate to oslo_log
+* Updated from global requirements
+* Periodically check nodes' existance
+* Log look up attributes at INFO level
+* Updated from global requirements
+* Use retries provided by ironicclient instead of ad-hoc ones
+* Split common database code into ironic_inspector.db
+* Require ironic API version 1.6
+* Load authenticate token from HTTP header
+* Implement optional API versioning
+* Fix functional test invocation
+* Convert functional test to a framework and decouple from client
+* Updated from global requirements
+* Make endpoint type configurable
+* Insert artificial delay between sending virtual nodes on introspection
+* Updated from global requirements
+* Fix and enhance contributing documentation on writing plugins
+* Improve support matrix readablity
+* Provide more meaningful message for error 500
+* Create a handler for uncaught 404 errors
+* Clarify version support matrix
+* Drop openstackclient from requirements
+* Updated from global requirements
+* Updated from global requirements
+* Switch to pbr postversioning
+
+2.0.1
+-----
+
+* Fix usage of mock due for the latest 1.1.0 mock
+* Bump version to 2.1.0
+
+2.0.0
+-----
+
+* Prerelease translation source update
+* Clean up tox.ini
+* Log when introspection has started
+* Updated from global requirements
+* Migrate to oslo_db
+* Specify server id clearly on the gate test
+* Allow addition of hooks without overriding defaults
+* Try real nova boot in exercise.sh
+* Use real property values from nova flavor in exercise.sh
+* Recommend disabling cinder in local.conf
+* Drop MANIFEST.in - it's not needed with PBR
+* Drop unused functest directory
+* Updated from global requirements
+* Fix and enhance devstack test script
+* Remove cliff from requirements.txt
+* Make functional test importable and stop depending on DIB code
+* Move Python ramdisk code out of tree
+* Deprecate authenticate opt in favor of auth_strategy
+* Updated from global requirements
+* Setup Translations
+* Move client out of tree
+* Switch to pbr
+* Remove ironic running check from inspector startup
+* Change the way error are returned from API to JSON
+* Provide hook into process when a node isn't found
+* Add missing backslash and run genconfig
+* Final discoverd -> inspector rename/move pass
+* Move create_ports to NodeInfo
+* Pass environment variables of proxy to tox
+* Update .gitreview file for project rename
+* Update devstack plugin for the recent authentication change
+* Rename edeploy plugin
+* Fix edeploy plugin puts too much data in Ironic extra column
+* Use keystonemiddleware auth credentials
+* Rework processing hook interface for 2.0.0
+* Naming clean up
+* Add node() and ports() to NodeInfo
+* Do not require scheduling attributes in ramdisk
+* Support standalone ironic
+* Add node UUID to response from /v1/continue
+* Make the number of green threads configurable
+* Launchpad project was renamed
+* Update from global requirements
+* Add SSL/TLS Support
+* Repair devstack plugin after rename
+* Fake missing local_gb for root_device_hint plugin
+* Rename discoverd -> inspector
+* Drop unused CLI options
+* Include journalctl output when sending logs
+* Support setting IPMI credentials in ironic_discoverd_ramdisk
+* Add babel.cfg to MANIFEST.in
+* Fix leftover of edeploy options removal
+* Remove profile matching from eDeploy plugin
+* Initial import of ironic_discoverd_ramdisk
+* Define API_VERSIONS in shell.py
+* Bump version to 1.2.0
+* README: More updates for Troubleshooting section
+* Check hooks availability on start-up
+* Doublecheck node provision state on receiving data from ramdisk
+* Delay failure from pre-processing hooks
+* Add unit tests for main.py
+* Pre-release documentation update
+* Add an option to always store ramdisk logs
+* Add ability to save logs received from the ramdisk
+* Document ipmi_address in HTTP API
+* Implement basic checks in functest/devstack-test.sh
+* Use my_ip as default URL instead of localhost
+* Enable ramdisk_error plugin by default
+* First take on integration test for using on devstack
+* Add unit tests for firewall.py
+* Add DevStack plugin for ironic-discoverd
+* Proper errors handling for client
+* Clean up firewall rules on exit
+* Invalidate cached node information after hooks run
+* Add option to delete ports after introspection
+* Add INSPECTFAIL as a valid state to start introspection
+* Update from global requirements
+* Switch to oslo.config
+* More generic option for tuning adding ports
+* Fix typos in ironic-discoverd
+* Documentation update
+* eDeploy: Store all of the facts collected by edeploy in Ironic DB
+* Stop waiting for power off to happen after introspection
+* eDeploy plugin to save BIOS and RAID configuration to node.extra
+* Enable overwrite_existing by default
+* CLI: give user a hint to power on the node when setting IPMI creds
+* Add python-openstackclient plugin for ironic-discoverd
+* None is a valid default value for base_url and auth_token in the client
+* Add scripts to manage translations
+* Consider dropping check on power state
+* Switch to Python 3.4 as default Python 3 env
+* Properly implement authentication via keystonemiddleware
+* Verify input uuid
+* eDeploy plugin to not overwrite node's capabilities
+* Change utils.get_ipmi_address(node) to always return IPv4 address
+* setup.py to work without requirements.txt
+* Change i18n domain to match what is generated in oslo-incubator sync
+* Always use non-localized strings in unit tests
+* Use less verbose imports for i18n
+* Support i18n part2
+* Support i18n part3
+* Fix i18n import
+* Support i18n
+* Getting ready for inclusion into projects.yaml
+* Update functest to new ramdisk code
+* Also set IPMI address if it's not set already
+* Don't wait for too long for IPMI credentials update
+* Functional test for setting IPMI credentials
+* Require maintenance mode for setting IPMI credentials
+* Download jq utility when running functest
+* Make root_device_hint plugin not to fail if no block device was received
+* Documentation and strings update
+* Adding root_device_hint plugin
+* Client and doc update for setting IPMI credentials
+* Revamp support for setting IPMI credentials
+* Make sure we always notify user about an introspect call error
+* Functional test for boot interface detection
+* Fix get_kernel_parameter fixture
+* Fix detection of PXELINUX-provided boot interface
+* Get rid of thread=False monkey-patching hack
+* Bump requirements to Kilo
+* Allow ramdisk to specify PXE boot interface
+* Refactor ValidateInterfaces plugin
+* Add eDeploy plugin
+* Start 1.1 development
+
+1.0.0
+-----
+
+* Finalize name + small readme fixes
+* Last-minute release notes update for 1.0.0
+* Bump randomly set retry count and delay
+* Support ilo_address and drac_address in addition to ipmi_address
+* Update functest to use new ramdisk file name
+* Revert "Get rid of monkey patching work around for Python 2 in main.py"
+* Fix discovery image installation notes
+* Add missing test for client and mark some code as non-covered
+* Fix reporting errors happened in background thread of introspect()
+* Get rid of monkey patching work around for Python 2 in main.py
+* Use --config-file argument in functional testing
+* MANAGED -> MANAGEABLE
+* Update README for 1.0.0 release
+* Create directory for database if it doesn't exist
+* Allows passing of config file via --config-file option
+* Do not timeout nodes which already finished introspection
+* Dump test CLI output as JSON, not as Python repr
+* Small sdist-related cleanup
+* Introduce test-requirements and update to stable/juno
+* General naming and strings clean up
+* Do not proceed with introspection on a node twice
+* Changes utils.get_keystone(token) to utils.check_is_admin(token)
+* Switch setting IPMI credentials to using options and HTTP params
+* Add options table and convenience methods to work with it
+* Add introspect client call and switch functest to it
+* Refactor stable API to be /v1/introspection/<UUID>
+* Support new Kilo state machine
+* Rework node cache clean up according to recent changes
+* Implement get status endpoint
+* Disable setting IPMI credentials by default
+* Add 'default' argument to conf.get* functions
+* Remaining changes from making database a required option
+* Make database a required configuration option
+* Introduce __version__ and __version_info__
+* Store introspection result in the local database
+* Add option to overwrite existing properties
+* Try to set boot device to PXE before rebooting
+* Make firewall management optional
+* Reorder configuration options for clarity
+* Enable functional testing with local ramdisk source
+* Update README and stop posting full changelogs
+* Simple functional testing for discoverd and the reference ramdisk
+* Add forgotten modules to setup.py (shame on me)
+* Wait for power off before finishing discovery
+* Review and fix logging messages
+* Retry on Conflict exceptions from Ironic
+* Support updating IPMI credentials from within ramdisk
+* Require manual power on if ipmi_setup_credentials is set in Node.extra
+* Refactoring: split test.py and rewrite tests for process
+* Refactoring: cap complexity at 15 and coverage at 90
+* Refactoring: split discoverd.py into 2 modules
+* Refactoring: drop features incompatible with Kilo changes
+* Refactoring: consolidate standard plugins in one module
+* Wait for power off state before calling discovery done
+* Separate validating NIC data into a new plugin
+* Store good MAC's and interfaces in node_info after processing
+* Extend node_cache.pop_node() result to be a structure
+* Do not fail if ipmi_address is not present in discovery data
+* Cherry-pick changelog from 0.2.5
+* Workflow documentation is now in infra-manual
+* Return serialized node to the ramdisk
+* Add option `power_off_after_discovery`
+* Move code updating Node.properties to a plugin
+* Be even more paranoid in cleaning the iptables
+* Make /v1/continue synchronous and return real errors
+* Implement timeout for discovery
+* Support hooks for processing data
+* Fix issues with using the database
+* Pass toxinidir to the definition of requirements
+* Use node_cache in firewall for fetching MAC's on discovery
+* Keep cache of nodes under discovery in the local database
+* Add CONTRIBUTING.rst
+* Bump version to 1.0.0
+
+0.2.4
+-----
+
+* Release 0.2.4 to fix MANIFEST
+
+0.2.3
+-----
+
+* Enable hacking
+* Post-migration updates for stackforge and launchpad
+* Updates prior to moving to stackforge
+* Rename tox job flake8 -> pep8 as per OpenStack standart
+
+0.2.2
+-----
+
+* ChangeLog and small README fixes
+* Seriously update README
+* Allow undefined power state in maintenance mode and reboot instead of power on
+* Raise tox coverage target to 80%
+* More unit tests, fixed one bug
+* Separate utils module, more clean ups
+* Clean up in firewall module
+* gitignore .coverage file
+* Store discovery_timestamp in node extra (part of #4)
+* Small tweak
+* Test coverage reporting and gating
+* Warn if node seems already on discovery (finally closes #3)
+* Refuse to discover nodes that are not powered off or have instance uuid (part of #3)
+* Validate power interface on starting discovery (part of #3)
+* Move configuration to a separate module
+* On each start-up make several attempts to check that Ironic is available
+* Fixed comments
+* Make firewall more robust
+* Fixed README
+* Update changelog in README
+* Apply workarounds to restore basic function under Py33
+* Make validation for /v1/discover synchronous (part of #3)
+* Bump version
+
+0.2.1
+-----
+
+* Updated README
+* Do no log until logging is initialized
+* Warn if starting with authenticated=false
+* Ensure nodes are in maintenance mode (closes #5)
+* Always white-list MACs (closes #6)
+* LOG.warn -> LOG.warning
+* Make new behavior of ports creation configurable (closes #9)
+* Fix README
+* Accept interfaces from the ramdisk and only fill ports for NIC's with IP's (closes #8)
+* Fixed a typo
+* Version bump
+
+0.2.0
+-----
+
+* Updated description in setup.py
+* Add requests and six as explicit dependencies
+* Avoid tracebacks on power failure
+* Make SSH driver regex configurable
+* Do not fail discovery completely, if one node failed to power on
+* Fail early if no nodes were valid
+* Drop shebang from test.py, it's supposed to be used from tox
+* Separate firewall module
+* Fixed wrong signature of update_filters
+* Fixed README
+* Make firewall update period configurable
+* Lock around firewall update
+* Silence info's from urllib3
+* Fix tests and drop Python 2.6 support
+* Sort requirements.txt
+* Small fixes
+* Simple client in ironic_discoverd.client
+* Create Ironic client on each update_filters() call
+* Cleaned up _iptables function
+* Do not allow periodic task to stop on failure
+* Finally remove Makefile
+* Enable testing for other pythons + get back flake8
+* Install tox on Travis [2]
+* Install tox on Travis
+* Switch to tox
+* Python 3 compatibility
+* Enhanced README, added installation guide
+* Makefile: .PHONY
+* Switch to setuptools entry points
+* Implement authentication via Keystone
+* Refactor __main__ to import only discoverd module, not specific items
+* Bump version to 0.2.0
+
+0.1.1
+-----
+
+* Include man page into manifest
+* Simple man page
+* Updated README
+* Make interface configurable
+* Drop defaults from example.conf
+* Version bump
+
+0.1.0
+-----
+
+* Requires eventlet
+* Small wording fix
+* Version 0.1.0
+* Remove on_discovery after discovered data arrived
+* Remaining of threaded code
+* Revert "Switch to os.system instead of subprocess which is not thread-safe"
+* (Try to) switch to eventlet
+* Switch to os.system instead of subprocess which is not thread-safe
+* Updated from global requirements
+* Enhance example.conf with documentation
+* Remaining fixes + load listen address and port from configuration
+* Fixed for README
+* Stabilized API, update README
+* Fixed README
+* Bump version to 0.1
+* Apache license
+* MANIFEST.in for example.conf
+* Late version bump
+* Update README and drop make run target
+* Load configuration from file, not env
+* Add unit tests
+* README.md -> README.rst
+* Added main script and updated setup.py
+* Travis button
+* Enable Travis and make test
+* Updated Makefile and added README
+* New structure, getting ready for PyPI
+* Tabs vs spaces
+* Small issues - batch 2
+* Fixed firewall
+* Small fixes
+* Firewall handling
+* Inline some code and add docstrings
+* Call update_filters() periodically
+* Stub for changing iptables rules
+* Initial implementation of /start call
+* Force power state off after discovery
+* Basic implementation
+* Initial commit
