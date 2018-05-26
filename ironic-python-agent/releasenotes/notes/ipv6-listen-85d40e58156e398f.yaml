@@ -1,5 +1,0 @@
----
-fixes:
-  - If booted into a kernel that supports IPv6, Ironic Python Agent
-    now listens for connections on both the IPv4 and IPv6 wildcard
-    addresses.

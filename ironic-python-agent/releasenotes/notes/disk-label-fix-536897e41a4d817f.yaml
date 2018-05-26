@@ -1,5 +1,0 @@
----
-fixes:
-  - Fixes bug where the user specified disk_label
-    is ignored with partition images in agent
-    drivers.

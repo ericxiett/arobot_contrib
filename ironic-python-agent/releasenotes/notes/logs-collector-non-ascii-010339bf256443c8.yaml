@@ -1,4 +1,0 @@
----
-fixes:
-  - Fixes an issue using the "logs" inspection collector
-    when logs contain non-ascii characters.

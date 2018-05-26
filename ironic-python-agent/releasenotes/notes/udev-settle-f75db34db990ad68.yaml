@@ -1,3 +1,0 @@
----
-fixes:
-  - Ensure block devices are detected by the host OS before listing them.

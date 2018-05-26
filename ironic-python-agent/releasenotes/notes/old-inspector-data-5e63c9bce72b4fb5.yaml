@@ -1,5 +1,0 @@
----
-other:
-  - |
-    Introspection data no longer contains keys used for compatibility with
-    the old introspection ramdisk.

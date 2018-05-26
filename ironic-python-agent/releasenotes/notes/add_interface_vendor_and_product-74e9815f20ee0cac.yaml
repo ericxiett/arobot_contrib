@@ -1,4 +1,0 @@
----
-features:
-  - Add 'vendor' and 'product' fields to
-    interfaces data for future use in Ironic Inspector.
