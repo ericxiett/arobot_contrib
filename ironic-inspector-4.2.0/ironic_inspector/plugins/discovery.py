@@ -68,18 +68,18 @@ def _check_existing_nodes(introspection_data, node_driver_info, ironic):
                         '[processing]default_processing_hooks config option'))
 
     # verify existing node with discovered ipmi address
-    ipmi_address = node_driver_info.get('ipmi_address')
-    if ipmi_address:
-        # FIXME(aarefiev): it's not effective to fetch all nodes, and may
-        #                  impact on performance on big clusters
-        nodes = ironic.node.list(fields=('uuid', 'driver_info'), limit=0)
-        for node in nodes:
-            if ipmi_address == ir_utils.get_ipmi_address(node):
-                raise utils.Error(
-                    _('Node %(uuid)s already has BMC address '
-                      '%(ipmi_address)s, not enrolling') %
-                    {'ipmi_address': ipmi_address, 'uuid': node.uuid},
-                    data=introspection_data)
+    # ipmi_address = node_driver_info.get('ipmi_address')
+    # if ipmi_address:
+    #     # FIXME(aarefiev): it's not effective to fetch all nodes, and may
+    #     #                  impact on performance on big clusters
+    #     nodes = ironic.node.list(fields=('uuid', 'driver_info'), limit=0)
+    #     for node in nodes:
+    #         if ipmi_address == ir_utils.get_ipmi_address(node):
+    #             raise utils.Error(
+    #                 _('Node %(uuid)s already has BMC address '
+    #                   '%(ipmi_address)s, not enrolling') %
+    #                 {'ipmi_address': ipmi_address, 'uuid': node.uuid},
+    #                 data=introspection_data)
 
 
 def enroll_node_not_found_hook(introspection_data, **kwargs):
