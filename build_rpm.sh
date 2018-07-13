@@ -28,6 +28,16 @@ mkdir -p ~/rpmbuild/{BUILD,RPMS,SOURCES,SPECS,SRPMS}
 cp $IRONIC_DEP/* ~/rpmbuild/SOURCES
 cp $IRONIC_DEP/openstack-ironic.spec ~/rpmbuild/SPECS
 
+# Need to add newton repository
+cat << EOF > /etc/yum.repos.d/newton.repo
+[newton]
+name=newton
+baseurl=https://buildlogs.centos.org/centos/7/cloud/x86_64/openstack-newton/
+gpgchek=0
+enabled=1
+
+EOF
+
 yum-builddep ~/rpmbuild/SPECS/openstack-ironic.spec -y
 
 rpmbuild -bb ~/rpmbuild/SPECS/openstack-ironic.spec
@@ -60,3 +70,4 @@ cp ~/rpmbuild/RPMS/noarch/*.el7.noarch.rpm $BASEPATH/rpms/ironic-inspector
 
 rm -rf $IRONIC_INSPECTOR_DEP/ironic-inspector-$IRONIC_INSPECTOR_VER.tar.gz
 rm -rf ~/rpmbuild/{BUILD,RPMS,SOURCES,SPECS,SRPMS}
+
