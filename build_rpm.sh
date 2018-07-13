@@ -33,7 +33,7 @@ cat << EOF > /etc/yum.repos.d/newton.repo
 [newton]
 name=newton
 baseurl=https://buildlogs.centos.org/centos/7/cloud/x86_64/openstack-newton/
-gpgchek=0
+gpgcheck=0
 enabled=1
 
 EOF
